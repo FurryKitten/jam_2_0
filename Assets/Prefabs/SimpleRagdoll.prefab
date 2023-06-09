@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6640671785171436764}
   - component: {fileID: 6640671785171436765}
   - component: {fileID: 6640671785171436763}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LowerHandL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 10
   speed: 5
+  _gameStateData: {fileID: 11400000, guid: c6c8b6129b0ae254591bb8b1a43929d8, type: 2}
 --- !u!1 &6640671785182696953
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6640671785182696952}
   - component: {fileID: 6640671785182696935}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperHandSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +219,7 @@ GameObject:
   - component: {fileID: 6640671785332759270}
   - component: {fileID: 6640671785332759271}
   - component: {fileID: 6640671785332759268}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,6 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 10
   speed: 5
+  _gameStateData: {fileID: 11400000, guid: c6c8b6129b0ae254591bb8b1a43929d8, type: 2}
 --- !u!1 &6640671785441560233
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +331,7 @@ GameObject:
   - component: {fileID: 6640671785441560214}
   - component: {fileID: 6640671785441560215}
   - component: {fileID: 6640671785441560212}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LowerLegR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -437,6 +439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 10
   speed: 5
+  _gameStateData: {fileID: 11400000, guid: c6c8b6129b0ae254591bb8b1a43929d8, type: 2}
 --- !u!1 &6640671785490571827
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +453,7 @@ GameObject:
   - component: {fileID: 6640671785490571824}
   - component: {fileID: 6640671785490571825}
   - component: {fileID: 6640671785490571838}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperHandR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,6 +562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 10
   speed: 5
+  _gameStateData: {fileID: 11400000, guid: c6c8b6129b0ae254591bb8b1a43929d8, type: 2}
 --- !u!1 &6640671785667407743
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,7 +573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6640671785667407742}
   - component: {fileID: 6640671785667407741}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BodySprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -656,7 +660,7 @@ GameObject:
   - component: {fileID: 6640671785735141793}
   - component: {fileID: 6640671785735141794}
   - component: {fileID: 6640671785735141807}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperLegR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -765,6 +769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 10
   speed: 5
+  _gameStateData: {fileID: 11400000, guid: c6c8b6129b0ae254591bb8b1a43929d8, type: 2}
 --- !u!1 &6640671785892550933
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6640671785892550932}
   - component: {fileID: 6640671785892550931}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperHandSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,7 +867,7 @@ GameObject:
   - component: {fileID: 6640671786110455971}
   - component: {fileID: 6640671786110455972}
   - component: {fileID: 6640671786110455970}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LowerLegL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -970,6 +975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 10
   speed: 5
+  _gameStateData: {fileID: 11400000, guid: c6c8b6129b0ae254591bb8b1a43929d8, type: 2}
 --- !u!1 &6640671786206129229
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,7 +986,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6640671786206129228}
   - component: {fileID: 6640671786206129227}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BodySprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1064,7 +1070,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6640671786229586428}
   - component: {fileID: 6640671786229586427}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperLegSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1150,7 +1156,7 @@ GameObject:
   - component: {fileID: 6640671786237217198}
   - component: {fileID: 6640671786237217199}
   - component: {fileID: 6640671786237217184}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1234,6 +1240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 10
   speed: 5
+  _gameStateData: {fileID: 11400000, guid: c6c8b6129b0ae254591bb8b1a43929d8, type: 2}
 --- !u!1 &6640671786275569613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,7 +1254,7 @@ GameObject:
   - component: {fileID: 6640671786275569611}
   - component: {fileID: 6640671786275569609}
   - component: {fileID: 6640671786275569608}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1331,6 +1338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 10
   speed: 5
+  _gameStateData: {fileID: 11400000, guid: c6c8b6129b0ae254591bb8b1a43929d8, type: 2}
 --- !u!233 &6640671786275569608
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -1365,7 +1373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6640671786303270170}
   - component: {fileID: 6640671786303270169}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LowerHandSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1449,7 +1457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6640671786326000065}
   - component: {fileID: 6640671786326000064}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LowerHandSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1533,7 +1541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6640671786349363000}
   - component: {fileID: 6640671786349362983}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LowerLegSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1617,7 +1625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6640671786422208882}
   - component: {fileID: 6640671786422208881}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperLegSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1700,7 +1708,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6640671786430001683}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SimpleRagdoll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1739,7 +1747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6640671786563412635}
   - component: {fileID: 6640671786563412634}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HeadSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1826,7 +1834,7 @@ GameObject:
   - component: {fileID: 6640671786740871215}
   - component: {fileID: 6640671786740871200}
   - component: {fileID: 6640671786740871213}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LowerHandR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1934,6 +1942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 10
   speed: 5
+  _gameStateData: {fileID: 11400000, guid: c6c8b6129b0ae254591bb8b1a43929d8, type: 2}
 --- !u!1 &6640671786753796567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1947,7 +1956,7 @@ GameObject:
   - component: {fileID: 6640671786753796564}
   - component: {fileID: 6640671786753796565}
   - component: {fileID: 6640671786753796562}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperHandL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2056,6 +2065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 10
   speed: 5
+  _gameStateData: {fileID: 11400000, guid: c6c8b6129b0ae254591bb8b1a43929d8, type: 2}
 --- !u!1 &6640671786993633691
 GameObject:
   m_ObjectHideFlags: 0
@@ -2066,7 +2076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6640671786993633690}
   - component: {fileID: 6640671786993633689}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LowerLegSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2153,7 +2163,7 @@ GameObject:
   - component: {fileID: 6640671787087001554}
   - component: {fileID: 6640671787087001555}
   - component: {fileID: 6640671787087001552}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperLegL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2262,3 +2272,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 10
   speed: 5
+  _gameStateData: {fileID: 11400000, guid: c6c8b6129b0ae254591bb8b1a43929d8, type: 2}
