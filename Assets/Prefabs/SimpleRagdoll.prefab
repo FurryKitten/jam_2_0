@@ -240,7 +240,7 @@ Transform:
   m_Children:
   - {fileID: 6640671786563412635}
   m_Father: {fileID: 6640671786430001683}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &6640671785332759269
 CircleCollider2D:
@@ -1157,7 +1157,7 @@ GameObject:
   - component: {fileID: 6640671786237217199}
   - component: {fileID: 6640671786237217184}
   m_Layer: 6
-  m_Name: Body (1)
+  m_Name: LowerBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1177,7 +1177,7 @@ Transform:
   m_Children:
   - {fileID: 6640671786206129228}
   m_Father: {fileID: 6640671786430001683}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &6640671786237217198
 BoxCollider2D:
@@ -1255,7 +1255,7 @@ GameObject:
   - component: {fileID: 6640671786275569609}
   - component: {fileID: 6640671786275569608}
   m_Layer: 6
-  m_Name: Body
+  m_Name: UpperBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1708,6 +1708,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6640671786430001683}
+  - component: {fileID: 1887897036}
   m_Layer: 6
   m_Name: SimpleRagdoll
   m_TagString: Untagged
@@ -1732,11 +1733,23 @@ Transform:
   - {fileID: 6640671786753796566}
   - {fileID: 6640671785490571826}
   - {fileID: 6640671786275569612}
-  - {fileID: 6640671785332759288}
   - {fileID: 6640671786237217185}
+  - {fileID: 6640671785332759288}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1887897036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6640671786430001684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd127f5a4e8a0f64096bb24b3f626ce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6640671786563412636
 GameObject:
   m_ObjectHideFlags: 0
