@@ -4,7 +4,7 @@ public abstract class RagdollMonobeh : MonoBehaviour
 {
     [SerializeField, Range(0.0f, 5.0f)] private float _looseAngle;
 
-    private Ragdoll _ragdoll;
+    public Ragdoll Ragdoll { get; private set; }
 
     private void Awake()
     {
@@ -20,7 +20,7 @@ public abstract class RagdollMonobeh : MonoBehaviour
         var lowerHandRObj = transform.Find("LowerHandR").gameObject;
         var lowerHandLObj = transform.Find("LowerHandL").gameObject;
                                                            
-        _ragdoll = new Ragdoll(
+        Ragdoll = new Ragdoll(
             head: headObj,
             upperBody: upperBodyObj,
             lowerBody: lowerBodyObj,
@@ -37,7 +37,7 @@ public abstract class RagdollMonobeh : MonoBehaviour
 
     public void FixateJoints()
     {
-        _ragdoll.FixateJoints(_looseAngle);
+        Ragdoll.FixateJoints(_looseAngle);
     }
 
     /* TODO: Добавить визуал, показывающий ближайшую часть */
@@ -50,9 +50,9 @@ public abstract class RagdollMonobeh : MonoBehaviour
 
     private GameObject FindNearestPart(Vector2 position)
     {
-        GameObject nearestPart = _ragdoll.Parts[0].Obj;
+        GameObject nearestPart = Ragdoll.Parts[0].Obj;
         float distance = float.MaxValue;
-        _ragdoll.Parts.ForEach(part => {
+        Ragdoll.Parts.ForEach(part => {
             float newDistance = (part.Rb.position - position).sqrMagnitude;
             if (newDistance < distance)
             {

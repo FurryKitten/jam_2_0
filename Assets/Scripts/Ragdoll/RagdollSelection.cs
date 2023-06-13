@@ -5,4 +5,5 @@ using UnityEngine;
 public class RagdollSelection : MonoBehaviour
 {
     public GameObject SelectedRagdoll;
+
 }
