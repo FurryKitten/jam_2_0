@@ -164,6 +164,15 @@ public class Ragdoll
         return bounds;
     }
 
+    public void TurnOnGravity()
+    {
+         Parts.ForEach(part => {
+           part.Rb.gravityScale = 1;
+         });
+        UpperBody.Rb.isKinematic = true;
+        LowerBody.Rb.isKinematic = true;
+    }
+
     private void GetRenderers()
     {
         if (_renderers.Any()) 

@@ -33,6 +33,9 @@ public abstract class RagdollMonobeh : MonoBehaviour
             lowerHandR: lowerHandRObj,
             lowerHandL: lowerHandLObj
         );
+
+
+        EventManager.buildingFinish.AddListener(() => { _ragdoll.FixateJoints(_looseAngle); _ragdoll.TurnOnGravity(); });
     }
 
     public void FixateJoints()
@@ -62,4 +65,5 @@ public abstract class RagdollMonobeh : MonoBehaviour
         });
         return nearestPart;
     }
+
 }

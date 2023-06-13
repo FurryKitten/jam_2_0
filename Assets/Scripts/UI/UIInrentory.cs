@@ -10,6 +10,7 @@ public class UIInrentory : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _wheelCounter;
     [SerializeField] private TextMeshProUGUI _gasTankCounter;
     [SerializeField] private TextMeshProUGUI _bodyCounter;
+    [SerializeField] private RagdollSpawner _wheelSpawner;
     private int _wheelNumber = 2;
     private int _gasTankNumber = 1;
     private int _bodyNumber = 1;
@@ -21,34 +22,35 @@ public class UIInrentory : MonoBehaviour
         _bodyCounter.text = _bodyNumber.ToString();
     }
 
-    public void SpawnRagdoll(GameObject ragdoll)
-    {
-        Instantiate(ragdoll);
-    }
+   // public void SpawnRagdoll(GameObject ragdoll)
+   // {
+      //  Instantiate(ragdoll);
+   // }
     public void SpawnWheel(GameObject ragdoll)
     {
         if (_wheelNumber > 0)
-        { 
-            Instantiate(ragdoll);
+        {
+            //    Instantiate(ragdoll);
+            _wheelSpawner.SpawnRagdoll(ragdoll);
             _wheelNumber--;
             _wheelCounter.text = _wheelNumber.ToString();
         }
     }
 
-    public void SpawnGasTank(GameObject ragdoll)
+    public void SpawnGasTank()
     {
         if (_gasTankNumber > 0)
         { 
-            Instantiate(ragdoll);
+          //  Instantiate(ragdoll);
             _gasTankNumber--;
             _gasTankCounter.text = _gasTankNumber.ToString();
         }
     }
-    public void SpawnBody(GameObject ragdoll)
+    public void SpawnBody()
     {
         if (_bodyNumber > 0)
         {
-            Instantiate(ragdoll);
+           // Instantiate(ragdoll);
             _bodyNumber--;
             _bodyCounter.text = _bodyNumber.ToString();
         }

@@ -4,4 +4,6 @@ using UnityEngine;
 
 public class WheelRagdoll : RagdollMonobeh
 {
+    private WheelJoint2D _wheelJoint2D;
+
 }

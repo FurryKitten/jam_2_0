@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RagdollDragging : MonoBehaviour
 {
-    [SerializeField] private RagdollSelection _ragdollSelection;
+  //  [SerializeField] private RagdollSelection _ragdollSelection;
     [SerializeField] private float distance = 10f;
     [SerializeField] private float speed = 5f;
     [SerializeField] private GameStateData _gameStateData;
@@ -20,8 +20,8 @@ public class RagdollDragging : MonoBehaviour
     {
         if(!_gameStateData.IsBuildFinished)
         {
-            if (_ragdollSelection.SelectedRagdoll != transform.parent.gameObject)
-                _ragdollSelection.SelectedRagdoll = transform.parent.gameObject;
+          //  if (_ragdollSelection.SelectedRagdoll != transform.parent.gameObject)
+            //    _ragdollSelection.SelectedRagdoll = transform.parent.gameObject;
             Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
             Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
