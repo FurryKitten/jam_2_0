@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class RagdollPart
 {
@@ -22,32 +24,34 @@ public class RagdollPart
         _joint = _obj.GetComponent<HingeJoint2D>();
     }
 
-    public Rigidbody2D Rb { get => _rb; set => _rb = value; }
-    public HingeJoint2D Joint { get => _joint; set => _joint = value; }
-    public GameObject Obj { get => _obj; set => _obj = value; }
+    public Rigidbody2D Rb => _rb;
+    public HingeJoint2D Joint => _joint;
+    public GameObject Obj => _obj;
 }
 
 public class Ragdoll
 {
     #region Parts
 
-    public RagdollPart UpperLegR;
-    public RagdollPart UpperLegL;
-    public RagdollPart LowerLegR;
-    public RagdollPart LowerLegL;
+    public RagdollPart UpperLegR { get; }
+    public RagdollPart UpperLegL { get; }
+    public RagdollPart LowerLegR { get; }
+    public RagdollPart LowerLegL { get; }
 
-    public RagdollPart UpperHandR;
-    public RagdollPart UpperHandL;
-    public RagdollPart LowerHandR;
-    public RagdollPart LowerHandL;
+    public RagdollPart UpperHandR { get; }
+    public RagdollPart UpperHandL { get; }
+    public RagdollPart LowerHandR { get; }
+    public RagdollPart LowerHandL { get; }
 
-    public RagdollPart UpperBody;
-    public RagdollPart LowerBody;
-    public RagdollPart Head;
+    public RagdollPart UpperBody { get; }
+    public RagdollPart LowerBody { get; }
+    public RagdollPart Head { get; }
+
+    public List<RagdollPart> Parts { get; }
 
     #endregion
 
-    public List<RagdollPart> Parts { get; }
+    private List<Renderer> _renderers = new List<Renderer>();
 
     #region Parts constructors
 
@@ -89,6 +93,8 @@ public class Ragdoll
             LowerBody,
             Head
         };
+
+        GetRenderers();
     }
 
     public Ragdoll(GameObject head,
@@ -129,6 +135,8 @@ public class Ragdoll
             LowerBody,
             Head
         };
+
+        GetRenderers();
     }
 
     #endregion
@@ -144,4 +152,31 @@ public class Ragdoll
             part.Joint.limits = limits;
         });
     }
+
+    public Bounds GetBounds()
+    {
+        Bounds bounds = new Bounds(Parts[0].Rb.position, Vector3.zero);
+
+        _renderers.ForEach(renderer => {
+            bounds.Encapsulate(renderer.bounds);
+        });
+
+        return bounds;
+    }
+
+    private void GetRenderers()
+    {
+        if (_renderers.Any()) 
+            return;
+        
+        Parts.ForEach(part => {
+            foreach (var renderer in part.Obj.GetComponentsInChildren<Renderer>())
+            {
+                if (_renderers.Contains(renderer)) continue;
+                _renderers.Add(renderer);
+            }
+        });
+        
+    }
+
 }

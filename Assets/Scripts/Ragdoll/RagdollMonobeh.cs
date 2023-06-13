@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public class RagdollMonobeh : MonoBehaviour
+public abstract class RagdollMonobeh : MonoBehaviour
 {
+    [SerializeField, Range(0.0f, 5.0f)] private float _looseAngle;
+
     private Ragdoll _ragdoll;
 
     private void Awake()
@@ -13,10 +15,10 @@ public class RagdollMonobeh : MonoBehaviour
         var upperLegLObj  = transform.Find("UpperLegL").gameObject;
         var upperHandRObj = transform.Find("UpperHandR").gameObject;
         var upperHandLObj = transform.Find("UpperHandL").gameObject;
-        var lowerLegRObj  = upperLegRObj.transform.Find("LowerLegR").gameObject;
-        var lowerLegLObj  = upperLegLObj.transform.Find("LowerLegL").gameObject;
-        var lowerHandRObj = upperHandRObj.transform.Find("LowerHandR").gameObject;
-        var lowerHandLObj = upperHandLObj.transform.Find("LowerHandL").gameObject;
+        var lowerLegRObj  = transform.Find("LowerLegR").gameObject;
+        var lowerLegLObj  = transform.Find("LowerLegL").gameObject;
+        var lowerHandRObj = transform.Find("LowerHandR").gameObject;
+        var lowerHandLObj = transform.Find("LowerHandL").gameObject;
                                                            
         _ragdoll = new Ragdoll(
             head: headObj,
@@ -33,12 +35,31 @@ public class RagdollMonobeh : MonoBehaviour
         );
     }
 
-    /*
-     Добавить метод для фиксации, вызывать его по событию (нажали кнопку играть)
-     Action? https://habr.com/ru/companies/otus/articles/725068/
-     */
     public void FixateJoints()
     {
-        _ragdoll.FixateJoints(1.0f);
+        _ragdoll.FixateJoints(_looseAngle);
+    }
+
+    /* TODO: Добавить визуал, показывающий ближайшую часть */
+    public void AttachRagdollToNearestPart(GameObject selectedRagdoll)
+    {
+        GameObject nearestPart = FindNearestPart(selectedRagdoll.transform.position);
+        selectedRagdoll.transform.parent = nearestPart.transform;
+    }
+
+
+    private GameObject FindNearestPart(Vector2 position)
+    {
+        GameObject nearestPart = _ragdoll.Parts[0].Obj;
+        float distance = float.MaxValue;
+        _ragdoll.Parts.ForEach(part => {
+            float newDistance = (part.Rb.position - position).sqrMagnitude;
+            if (newDistance < distance)
+            {
+                distance = newDistance;
+                nearestPart = part.Obj;
+            }
+        });
+        return nearestPart;
     }
 }
