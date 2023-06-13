@@ -52,6 +52,7 @@ public class Ragdoll
     #endregion
 
     private List<Renderer> _renderers = new List<Renderer>();
+    private List<Collider2D> _colliders = new List<Collider2D>();
 
     #region Parts constructors
 
@@ -95,6 +96,7 @@ public class Ragdoll
         };
 
         GetRenderers();
+        GetColliders();
     }
 
     public Ragdoll(GameObject head,
@@ -137,6 +139,7 @@ public class Ragdoll
         };
 
         GetRenderers();
+        GetColliders();
     }
 
     #endregion
@@ -163,6 +166,17 @@ public class Ragdoll
 
         return bounds;
     }
+    
+    public Bounds GetBoundsCollider()
+    {
+        Bounds bounds = new Bounds(Parts[0].Rb.position, Vector3.zero);
+
+        _colliders.ForEach(collider => {
+            bounds.Encapsulate(collider.bounds);
+        });
+
+        return bounds;
+    }
 
     public void TurnOnGravity()
     {
@@ -175,9 +189,9 @@ public class Ragdoll
 
     private void GetRenderers()
     {
-        if (_renderers.Any()) 
+        if (_renderers.Any())
             return;
-        
+
         Parts.ForEach(part => {
             foreach (var renderer in part.Obj.GetComponentsInChildren<Renderer>())
             {
@@ -185,7 +199,20 @@ public class Ragdoll
                 _renderers.Add(renderer);
             }
         });
-        
+    }
+
+    private void GetColliders()
+    {
+        if (_colliders.Any())
+            return;
+
+        Parts.ForEach(part => {
+            foreach (var collider in part.Obj.GetComponentsInChildren<Collider2D>())
+            {
+                if (_colliders.Contains(collider)) continue;
+                _colliders.Add(collider);
+            }
+        });
     }
 
 }

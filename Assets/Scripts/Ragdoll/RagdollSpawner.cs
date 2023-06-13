@@ -5,12 +5,6 @@ using UnityEngine;
 public class RagdollSpawner : MonoBehaviour
 {
     public List<GameObject> SpawnedRagdolls { get; }
-    public GameObject SelectedRagdoll { get; }
-
-    private void Awake()
-    {
-        
-    }
 
     public void SpawnRagdoll(GameObject ragdoll)
     {
